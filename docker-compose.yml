@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: ./Python-Flask/
+      dockerfile: Dockerfile
+    depends_on:
+     - redis
+  redis:
+    build:
+      context: ./Redis/
+      dockerfile: Dockerfile
+
+  myproxy:
+    build:
+      context: ./Nginx-As-Proxy/
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    links:
+      - "web:app"
+  
+  nginx-static:
+    build:
+      context: ./Nginx-Static-Pages/
+      dockerfile: Dockerfile
