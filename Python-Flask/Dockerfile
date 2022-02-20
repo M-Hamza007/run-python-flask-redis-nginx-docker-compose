@@ -1,5 +1,5 @@
 FROM python:3.10-slim-bullseye
-EXPOSE 5000
+# EXPOSE 5000
 
 ADD . /code
 WORKDIR /code

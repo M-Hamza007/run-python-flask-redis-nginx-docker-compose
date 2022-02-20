@@ -6,6 +6,8 @@ services:
       dockerfile: Dockerfile
     depends_on:
      - redis
+    ports:
+     - 5000:5000
   redis:
     build:
       context: ./Redis/
@@ -17,8 +19,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - 80:80
-    links:
-      - "web:app"
+    # links:
+    #   - "web:app"
   
   nginx-static:
     build:
