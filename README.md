@@ -19,3 +19,7 @@ To run all the container:
 3. Browse to http://localhost:80 to see the response from the python flask.
 
 4. Browser to http://localhost/static to see the static pages defined in nginx static container.
+
+__
+
+https://www.techrepublic.com/videos/if-you-need-to-copy-files-between-a-host-and-a-docker-container-heres-how/
